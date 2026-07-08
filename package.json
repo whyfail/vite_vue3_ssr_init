@@ -1,0 +1,80 @@
+{
+  "name": "{{ name }}",
+  "version": "1.0.0",
+  "private": true,
+  "description": "{{ description }}",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "start": "nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "test": "nuxt prepare && vitest run",
+    "test:coverage": "nuxt prepare && vitest run --coverage",
+    "test:junit": "nuxt prepare && vitest run --reporter=junit --outputFile=test-results/vitest-junit.xml",
+    "test:watch": "nuxt prepare && vitest",
+    "test:ui": "nuxt prepare && vitest --ui",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:component-coverage": "node scripts/check-component-tests.js",
+    "typecheck": "nuxt typecheck",
+    "lint": "oxlint . --vue-plugin --import-plugin --deny-warnings",
+    "lint:fix": "oxlint . --vue-plugin --import-plugin --fix",
+    "format": "oxfmt . --write",
+    "format:check": "oxfmt . --check",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "^5.2.9",
+    "@heroicons/vue": "^2.2.0",
+    "@lucide/vue": "^1.23.0",
+    "@pinia/nuxt": "^0.11.3",
+    "@tailwindcss/vite": "^4.3.2",
+    "@vueuse/core": "^14.3.0",
+    "axios": "^1.18.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "nuxt": "^4.4.8",
+    "pinia": "^3.0.4",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.3.2",
+    "vue": "^3.5.39",
+    "vue-sonner": "^2.0.9"
+  },
+  "devDependencies": {
+    "@nuxt/test-utils": "^4.0.0",
+    "@playwright/test": "^1.61.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@testing-library/vue": "^8.1.0",
+    "@types/jest-axe": "^3.5.9",
+    "@types/node": "^26.1.0",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/ui": "^4.1.10",
+    "@vue/test-utils": "^2.4.11",
+    "jest-axe": "^10.0.0",
+    "jsdom": "^29.1.1",
+    "lint-staged": "^17.0.8",
+    "msw": "^2.14.6",
+    "oxfmt": "^0.58.0",
+    "oxlint": "^1.73.0",
+    "simple-git-hooks": "^2.13.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10",
+    "vue-tsc": "^3.3.6"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "node scripts/verify-commit.js $1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": "oxlint --vue-plugin --import-plugin --fix --no-error-on-unmatched-pattern",
+    "*.{js,jsx,ts,tsx,vue,json,jsonc,css,html,md,yml,yaml}": "oxfmt --write --no-error-on-unmatched-pattern"
+  },
+  "engines": {
+    "node": "^22.12.0 || ^24.11.0 || >=26.0.0"
+  },
+  "packageManager": "pnpm@11.10.0"
+}
