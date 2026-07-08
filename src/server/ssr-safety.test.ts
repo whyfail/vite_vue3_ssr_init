@@ -6,10 +6,10 @@ import LoginPage from "@/features/auth/pages/LoginPage.vue";
 
 describe("SSR safety", () => {
   it("server-renders the docs view without browser globals", async () => {
-    await expect(renderToString(createSSRApp(DocsPage))).resolves.toContain("企业级 SSR 基线");
+    await expect(renderToString(createSSRApp(DocsPage))).resolves.toContain("项目开发文档");
   });
 
   it("server-renders the login view without browser globals", async () => {
-    await expect(renderToString(createSSRApp(LoginPage))).resolves.toContain("CWA Vue SSR");
+    await expect(renderToString(createSSRApp(LoginPage))).resolves.toContain("登录");
   });
 });
