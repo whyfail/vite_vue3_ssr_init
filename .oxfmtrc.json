@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "ignorePatterns": [
+    ".nuxt",
+    ".output",
+    "coverage",
+    "node_modules",
+    "playwright-report",
+    "test-results"
+  ],
+  "sortTailwindcss": {
+    "attributes": ["class", "className", ":class"],
+    "functions": ["clsx", "cn", "cva"],
+    "stylesheet": "./src/assets/css/tailwind.css"
+  }
+}

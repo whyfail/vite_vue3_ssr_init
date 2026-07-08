@@ -2,7 +2,7 @@
 import DocsPage from "@/features/docs/pages/DocsPage.vue";
 
 definePageMeta({
-  title: "SSR 模板工作台",
+  layout: false,
 });
 
 useHead({

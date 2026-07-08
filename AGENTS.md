@@ -7,6 +7,8 @@
 - Nuxt SSR is enabled by default. Browser-only behavior must live in `.client` plugins, `onMounted`, or `import.meta.client` guarded code.
 - Do not access `window`, `document`, `localStorage`, `sessionStorage`, canvas, or browser performance APIs from server-rendered paths.
 - Business requests should use shared API wrappers in `src/shared/api`; do not scatter raw `fetch` or `axios` setup across pages.
+- shadcn-vue is configured by `components.json`; generated UI primitives belong in `src/shared/ui`, shared helpers in `src/shared/lib`, and composables in `src/shared/composables`.
+- code-inspector-plugin is available behind `NUXT_ENABLE_CODE_INSPECTOR=true` in the actual environment (`.env.local`, `.env`, or command prefix) for local browser-to-source jumps; use `NUXT_CODE_INSPECTOR_ACTION=copy` to copy source locations instead of opening the editor, and keep it disabled by default in template examples.
 - When adding or changing any component, add or update a component test for it; every component should have at least a render smoke test.
 - Validate with `pnpm test`, `pnpm test:coverage`, `pnpm test:component-coverage`, `pnpm typecheck`, `pnpm lint`, `pnpm test:e2e`, and `pnpm build`.
 - Test reports are written to `coverage/`, `test-results/`, and `playwright-report/`; inspect them before lowering coverage thresholds.
@@ -23,3 +25,4 @@
 - Prefer TypeScript and `<script setup lang="ts">`.
 - Avoid Vue mustache interpolation in template files that may be processed by create-wl-app. Prefer `v-text` for dynamic demo text.
 - Keep UI text concise and business-like. This template is a work surface, not a marketing page.
+- Prefer shadcn-vue/reka-ui primitives before custom markup. Browser-only primitives should be used in client-safe paths and tested with mount smoke tests.

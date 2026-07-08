@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { RefreshCw } from "@lucide/vue";
 import { clearError } from "#app";
+import { Badge } from "@/shared/ui/badge";
+import { Button } from "@/shared/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/shared/ui/card";
 
 const props = defineProps<{
   error: {
@@ -15,17 +18,21 @@ function clear() {
 </script>
 
 <template>
-  <main class="login-page">
-    <section class="login-panel" aria-labelledby="error-title">
-      <p class="badge" v-text="props.error.statusCode || 'Error'" />
-      <h1 id="error-title" class="page-title">页面加载失败</h1>
-      <p class="page-subtitle" v-text="props.error.message || '请稍后重试。'" />
-      <div class="form-grid">
-        <button class="button primary" type="button" @click="clear">
+  <main class="grid min-h-screen place-items-center bg-background p-6">
+    <Card class="w-full max-w-[420px] p-7" aria-labelledby="error-title">
+      <CardHeader>
+        <Badge variant="secondary" v-text="props.error.statusCode || 'Error'" />
+        <CardTitle id="error-title" class="text-2xl leading-tight font-semibold">
+          页面加载失败
+        </CardTitle>
+        <CardDescription v-text="props.error.message || '请稍后重试。'" />
+      </CardHeader>
+      <CardContent>
+        <Button class="mt-5 w-full" type="button" @click="clear">
           <RefreshCw :size="16" aria-hidden="true" />
           <span>返回文档页</span>
-        </button>
-      </div>
-    </section>
+        </Button>
+      </CardContent>
+    </Card>
   </main>
 </template>

@@ -8,7 +8,7 @@ describe("LoginPage", () => {
   it("renders the login page", () => {
     renderWithApp(LoginPage);
 
-    expect(screen.getByRole("heading", { name: "CWA Vue SSR" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "登录" })).toBeInTheDocument();
     expect(screen.getByLabelText("账号")).toBeInTheDocument();
   });
 

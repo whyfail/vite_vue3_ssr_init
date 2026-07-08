@@ -18,8 +18,8 @@
     "test:e2e:ui": "playwright test --ui",
     "test:component-coverage": "node scripts/check-component-tests.js",
     "typecheck": "nuxt typecheck",
-    "lint": "oxlint . --vue-plugin --import-plugin --deny-warnings",
-    "lint:fix": "oxlint . --vue-plugin --import-plugin --fix",
+    "lint": "oxlint . --vue-plugin --import-plugin --deny-warnings && eslint .",
+    "lint:fix": "oxlint . --vue-plugin --import-plugin --fix && eslint . --fix",
     "format": "oxfmt . --write",
     "format:check": "oxfmt . --check",
     "preinstall": "npx only-allow pnpm",
@@ -31,18 +31,24 @@
     "@lucide/vue": "^1.23.0",
     "@pinia/nuxt": "^0.11.3",
     "@tailwindcss/vite": "^4.3.2",
+    "@tanstack/vue-table": "^8.21.3",
     "@vueuse/core": "^14.3.0",
     "axios": "^1.18.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "nuxt": "^4.4.8",
     "pinia": "^3.0.4",
+    "reka-ui": "^2.10.1",
+    "shadcn-vue": "^2.7.4",
     "tailwind-merge": "^3.6.0",
     "tailwindcss": "^4.3.2",
+    "vaul-vue": "^0.4.1",
     "vue": "^3.5.39",
     "vue-sonner": "^2.0.9"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
     "@nuxt/test-utils": "^4.0.0",
     "@playwright/test": "^1.61.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -50,28 +56,35 @@
     "@testing-library/vue": "^8.1.0",
     "@types/jest-axe": "^3.5.9",
     "@types/node": "^26.1.0",
+    "@typescript-eslint/parser": "^8.63.0",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vitest/coverage-v8": "^4.1.10",
     "@vitest/ui": "^4.1.10",
     "@vue/test-utils": "^2.4.11",
+    "code-inspector-plugin": "^1.6.5",
+    "eslint": "^10.6.0",
+    "eslint-plugin-tailwindcss": "^4.0.6",
     "jest-axe": "^10.0.0",
     "jsdom": "^29.1.1",
     "lint-staged": "^17.0.8",
     "msw": "^2.14.6",
     "oxfmt": "^0.58.0",
     "oxlint": "^1.73.0",
+    "sass": "^1.101.0",
     "simple-git-hooks": "^2.13.1",
     "typescript": "^6.0.3",
     "vitest": "^4.1.10",
+    "vue-eslint-parser": "^10.4.1",
     "vue-tsc": "^3.3.6"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
-    "commit-msg": "node scripts/verify-commit.js $1"
+    "commit-msg": "pnpm exec commitlint --edit $1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,vue}": "oxlint --vue-plugin --import-plugin --fix --no-error-on-unmatched-pattern",
-    "*.{js,jsx,ts,tsx,vue,json,jsonc,css,html,md,yml,yaml}": "oxfmt --write --no-error-on-unmatched-pattern"
+    "*.vue": "eslint --fix --no-warn-ignored",
+    "*.{js,jsx,ts,tsx,vue,json,jsonc,css,scss,html,md,yml,yaml}": "oxfmt --write --no-error-on-unmatched-pattern"
   },
   "engines": {
     "node": "^22.12.0 || ^24.11.0 || >=26.0.0"
