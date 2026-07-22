@@ -25,7 +25,7 @@
   <br>
 
   <div>
-    <img src="https://img.shields.io/badge/Node.js-%5E22.12.0%20%7C%7C%20%5E24.11.0%20%7C%7C%20%3E%3D26.0.0-brightgreen?style=flat-square" alt="Node.js" />
+    <img src="https://img.shields.io/badge/Node.js-%5E22.19.0%20%7C%7C%20%5E24.11.0%20%7C%7C%20%3E%3D26.0.0-brightgreen?style=flat-square" alt="Node.js" />
     <img src="https://img.shields.io/badge/pnpm-11.10.0-blue?style=flat-square" alt="pnpm" />
     <img src="https://img.shields.io/badge/License-MIT-yellowgreen?style=flat-square" alt="License" />
   </div>
@@ -37,13 +37,13 @@
 
 ## 🚀 技术栈
 
-- **SSR 框架**：Nuxt 4
-- **前端框架**：Vue 3.5.39
+- **SSR 框架**：Nuxt 4.5.0
+- **前端框架**：Vue 3.5.40
 - **开发语言**：TypeScript 6.0.3
-- **状态管理**：Pinia 3.0.4 + @pinia/nuxt
+- **状态管理**：Pinia 3.0.4 + @pinia/nuxt 0.11.3
 - **UI 组件库**：shadcn-vue + reka-ui
-- **样式方案**：Tailwind CSS 4.3.2 + Sass
-- **图标方案**：Heroicons + @lucide/vue 1.24.0
+- **样式方案**：Tailwind CSS 4.3.3 + Sass
+- **图标方案**：Heroicons + @lucide/vue 1.25.0
 - **代码规范**：Oxlint 1.74.0 + ESLint 10.7.0 + oxfmt 0.59.0
 - **提交规范**：simple-git-hooks + lint-staged + commitlint
 - **API 封装**：Axios 1.18.1
@@ -53,7 +53,7 @@
 
 ### 环境要求
 
-- Node.js `^22.12.0 || ^24.11.0 || >=26.0.0`
+- Node.js `^22.19.0 || ^24.11.0 || >=26.0.0`
 - pnpm `11.10.0`
 
 ### 安装依赖
