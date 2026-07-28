@@ -55,7 +55,7 @@
     "@testing-library/user-event": "^14.6.1",
     "@testing-library/vue": "^8.1.0",
     "@types/jest-axe": "^3.5.9",
-    "@types/node": "^26.1.1",
+    "@types/node": "^24.13.3",
     "@typescript-eslint/parser": "^8.65.0",
     "@vitejs/plugin-vue": "^6.0.8",
     "@vitest/coverage-v8": "^4.1.10",
@@ -87,7 +87,7 @@
     "*.{js,jsx,ts,tsx,vue,json,jsonc,css,scss,html,md,yml,yaml}": "oxfmt --write --no-error-on-unmatched-pattern"
   },
   "engines": {
-    "node": "^22.19.0 || ^24.11.0 || >=26.0.0"
+    "node": "^24.18.0"
   },
   "packageManager": "pnpm@11.10.0"
 }
