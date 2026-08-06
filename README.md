@@ -26,7 +26,7 @@
 
   <div>
     <img src="https://img.shields.io/badge/Node.js-24.18.0-brightgreen?style=flat-square" alt="Node.js" />
-    <img src="https://img.shields.io/badge/pnpm-11.10.0-blue?style=flat-square" alt="pnpm" />
+    <img src="https://img.shields.io/badge/pnpm-11.20.0-blue?style=flat-square" alt="pnpm" />
     <img src="https://img.shields.io/badge/License-MIT-yellowgreen?style=flat-square" alt="License" />
   </div>
 </div>
@@ -37,16 +37,16 @@
 
 ## 🚀 技术栈
 
-- **SSR 框架**：Nuxt 4.5.0
+- **SSR 框架**：Nuxt 4.5.1
 - **前端框架**：Vue 3.5.40
 - **开发语言**：TypeScript 6.0.3
 - **状态管理**：Pinia 3.0.4 + @pinia/nuxt 0.11.3
 - **UI 组件库**：shadcn-vue + reka-ui
 - **样式方案**：Tailwind CSS 4.3.3 + Sass
-- **图标方案**：Heroicons + @lucide/vue 1.25.0
-- **代码规范**：Oxlint 1.74.0 + ESLint 10.7.0 + oxfmt 0.59.0
+- **图标方案**：Heroicons + @lucide/vue 1.28.0
+- **代码规范**：Oxlint 1.77.0 + ESLint 10.8.0 + oxfmt 0.62.0
 - **提交规范**：simple-git-hooks + lint-staged + commitlint
-- **API 封装**：Axios 1.18.1
+- **API 封装**：Axios 1.19.0
 - **测试体系**：Vitest + Testing Library Vue + Playwright + MSW + jest-axe
 
 ## 📦 快速开始
@@ -54,7 +54,7 @@
 ### 环境要求
 
 - Node.js `24.18.0`（Krypton LTS；支持范围 `^24.18.0`）
-- pnpm `11.10.0`
+- pnpm `11.20.0`
 
 ### 安装依赖
 
