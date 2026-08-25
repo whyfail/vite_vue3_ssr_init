@@ -19,7 +19,7 @@ function clear() {
 
 <template>
   <main class="grid min-h-screen place-items-center bg-background p-6">
-    <Card class="w-full max-w-[420px] p-7" aria-labelledby="error-title">
+    <Card class="w-full max-w-105 p-7" aria-labelledby="error-title">
       <CardHeader>
         <Badge variant="secondary" v-text="props.error.statusCode || 'Error'" />
         <CardTitle id="error-title" class="text-2xl leading-tight font-semibold">

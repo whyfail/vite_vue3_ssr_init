@@ -18,14 +18,14 @@ import LoginForm from "@/features/auth/components/LoginForm.vue";
         class="absolute top-1/2 left-1/2 size-[430px] -translate-1/2 rotate-45 border border-white/30 bg-black/10 shadow-[0_0_90px_rgba(34,211,238,0.45)] [clip-path:polygon(50%_0,100%_50%,50%_100%,0_50%)]"
       />
       <div
-        class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px] opacity-35"
+        class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-size-[72px_72px] opacity-35"
       />
       <div
         class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(2,6,23,0.34)_58%,rgba(2,6,23,0.78)_100%)]"
       />
     </div>
     <section
-      class="relative z-10 w-full max-w-[520px] rounded-[32px] bg-[#ecf0f350] p-8 shadow-[1px_1px_3px_#cbced1,-1px_-1px_3px_white] backdrop-blur-md"
+      class="relative z-10 w-full max-w-130 rounded-[32px] bg-[#ecf0f350] p-8 shadow-[1px_1px_3px_#cbced1,-1px_-1px_3px_white] backdrop-blur-md"
       aria-labelledby="login-title"
     >
       <h1
