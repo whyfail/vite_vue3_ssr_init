@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { setToken } from "@/features/auth/session";
+import { createSession } from "@/features/auth/session";
 import { Alert, AlertDescription } from "@/shared/ui/alert";
 import { Button } from "@/shared/ui/button";
 import { Input } from "@/shared/ui/input";
@@ -17,9 +17,15 @@ async function submit() {
     return;
   }
 
-  setToken("demo-token", remember.value);
-  if (typeof window !== "undefined") {
-    window.location.assign("/docs");
+  try {
+    await createSession({
+      username: username.value,
+      password: password.value,
+      remember: remember.value,
+    });
+    await navigateTo("/docs");
+  } catch (submitError) {
+    error.value = submitError instanceof Error ? submitError.message : "登录失败，请稍后重试。";
   }
 }
 </script>

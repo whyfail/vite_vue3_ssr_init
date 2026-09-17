@@ -6,6 +6,7 @@ const shouldLocateCodeInspectorInfo = codeInspectorAction !== "copy";
 
 export default defineNuxtConfig({
   srcDir: "src/",
+  serverDir: "src/server",
   compatibilityDate: "2026-07-08",
   devtools: { enabled: true },
   modules: ["@pinia/nuxt"],

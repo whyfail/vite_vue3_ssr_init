@@ -9,9 +9,3 @@ export function createApiClient(baseURL = "/api") {
     },
   });
 }
-
-export const apiClient = createApiClient(
-  typeof window === "undefined"
-    ? process.env.NUXT_API_BASE_URL || process.env.NUXT_PUBLIC_API_BASE_URL || "/api"
-    : process.env.NUXT_PUBLIC_API_BASE_URL || "/api",
-);

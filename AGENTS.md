@@ -13,7 +13,7 @@
 ## Package Manager
 
 Use **pnpm 11.20.0**: `pnpm install`, `pnpm dev`, `pnpm test`, `pnpm build`.
-Use Node.js 24.18.0 as the runtime baseline; `package.json` supports the Node 24 line from `^24.18.0`.
+Use the latest Node.js 24 LTS patch as the runtime baseline; `package.json` supports `>=24.11.0 <25`.
 
 ## Commands
 
@@ -33,6 +33,8 @@ Use Node.js 24.18.0 as the runtime baseline; `package.json` supports the Node 24
 - Browser-only behavior belongs in `.client` plugins, `onMounted`, or `import.meta.client` guarded code.
 - Browser APIs must not run in server-rendered paths.
 - Business requests go through `src/shared/api`; privileged calls stay server-only or in Nitro routes.
+- Authentication state uses an HttpOnly cookie created by the Nitro session API; protect server routes in `src/server/middleware` and never expose access tokens through browser storage.
+- Create request-aware API clients in Nuxt plugins with `useRuntimeConfig()`; do not read `process.env` from shared client/server modules.
 - Avoid Vue mustache interpolation in files processed by create-wl-app; prefer `v-text`.
 - code-inspector uses `NUXT_ENABLE_CODE_INSPECTOR=true` and optional `NUXT_CODE_INSPECTOR_ACTION=open|copy|both`.
 
