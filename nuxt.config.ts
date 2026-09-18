@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     apiBaseUrl: process.env.NUXT_API_BASE_URL || "",
     public: {
-      appName: process.env.NUXT_PUBLIC_APP_NAME || "CWA Vue SSR",
+      appName: process.env.NUXT_PUBLIC_APP_NAME || "Vue SSR Template",
       apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || "/api",
     },
   },

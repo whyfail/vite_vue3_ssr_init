@@ -5,6 +5,6 @@ export function getRequestContext(event: H3Event) {
   return {
     event,
     runtime: "node",
-    token: getCookie(event, "cwa_token"),
+    token: getCookie(event, "auth_token"),
   };
 }

@@ -17,7 +17,7 @@ const route = useRoute();
         >
           SSR
         </span>
-        <span>CWA Vue SSR</span>
+        <span>Vue SSR Template</span>
       </NuxtLink>
       <nav class="mt-7 grid gap-1.5">
         <NuxtLink

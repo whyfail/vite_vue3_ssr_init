@@ -6,7 +6,7 @@ definePageMeta({
 });
 
 useHead({
-  title: "文档 - CWA Vue SSR",
+  title: "文档 - Vue SSR Template",
 });
 </script>
 

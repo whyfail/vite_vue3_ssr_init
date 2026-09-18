@@ -6,7 +6,7 @@ definePageMeta({
 });
 
 useHead({
-  title: "登录 - CWA Vue SSR",
+  title: "登录 - Vue SSR Template",
 });
 </script>
 

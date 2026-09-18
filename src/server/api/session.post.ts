@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
   }
 
   // Replace the demo value with the token returned by the real authentication service.
-  setCookie(event, "cwa_token", "demo-token", {
+  setCookie(event, "auth_token", "demo-token", {
     httpOnly: true,
     maxAge: body.remember ? 60 * 60 * 24 * 30 : undefined,
     sameSite: "lax",

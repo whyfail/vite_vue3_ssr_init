@@ -29,7 +29,7 @@ describe("session API", () => {
     await expect(sessionHandler({} as never)).resolves.toEqual({ authenticated: true });
     expect(setCookie).toHaveBeenCalledWith(
       expect.anything(),
-      "cwa_token",
+      "auth_token",
       "demo-token",
       expect.objectContaining({ httpOnly: true, maxAge: 60 * 60 * 24 * 30 }),
     );
