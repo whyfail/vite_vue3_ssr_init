@@ -4,7 +4,7 @@ import vueParser from "vue-eslint-parser";
 
 export default [
   {
-    ignores: [".nuxt", ".output", "coverage", "playwright-report", "test-results"],
+    ignores: [".nuxt", ".output", "coverage", "playwright-report", "test-results", "src/shared/api/generated", "openapi"],
   },
   {
     files: ["src/**/*.vue"],

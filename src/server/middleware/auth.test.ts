@@ -25,7 +25,7 @@ describe("auth middleware", () => {
 
   it("allows authenticated docs requests", () => {
     vi.mocked(getRequestURL).mockReturnValue(new URL("http://localhost/docs"));
-    vi.mocked(getCookie).mockReturnValue("demo-token");
+    vi.mocked(getCookie).mockReturnValue("unit-test-opaque-token");
 
     authMiddleware({} as never);
 

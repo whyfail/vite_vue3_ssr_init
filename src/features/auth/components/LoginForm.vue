@@ -43,7 +43,7 @@ async function submit() {
         class="h-10 bg-white/80"
         name="username"
         autocomplete="username"
-        placeholder="请输入账号：admin"
+        placeholder="请输入账号"
       />
     </div>
     <div class="grid gap-1.5">
@@ -55,7 +55,7 @@ async function submit() {
         name="password"
         type="password"
         autocomplete="current-password"
-        placeholder="请输入登录密码：admin"
+        placeholder="请输入登录密码"
       />
     </div>
     <Button class="h-10 w-full" type="submit">登录</Button>

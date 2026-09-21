@@ -20,6 +20,7 @@ export default defineConfig({
         "src/pages/**",
         "src/layouts/**",
         "src/plugins/**",
+        "src/shared/api/generated/**",
       ],
       thresholds: {
         lines: 80,

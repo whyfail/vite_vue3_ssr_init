@@ -8,13 +8,13 @@ vi.mock("h3", () => ({
 
 describe("request context", () => {
   it("reads the authentication cookie from the request", () => {
-    vi.mocked(getCookie).mockReturnValue("demo-token");
+    vi.mocked(getCookie).mockReturnValue("unit-test-opaque-token");
     const event = {} as never;
 
     expect(getRequestContext(event)).toEqual({
       event,
       runtime: "node",
-      token: "demo-token",
+      token: "unit-test-opaque-token",
     });
   });
 });
