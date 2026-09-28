@@ -38,13 +38,13 @@
 ## 🚀 技术栈
 
 - **SSR 框架**：Nuxt 4.5.2
-- **前端框架**：Vue 3.5.42
+- **前端框架**：Vue 3.5.43
 - **开发语言**：TypeScript 6.0.3
 - **状态管理**：Pinia 4.0.3 + @pinia/nuxt 1.0.2
 - **UI 组件库**：shadcn-vue + reka-ui
 - **样式方案**：Tailwind CSS 4.3.3 + Sass
-- **图标方案**：Heroicons + @lucide/vue 1.46.0
-- **代码规范**：Oxlint 1.83.0 + ESLint 10.10.0 + oxfmt 0.68.0
+- **图标方案**：Heroicons + @lucide/vue 1.48.0
+- **代码规范**：Oxlint 1.85.0 + ESLint 10.11.0 + oxfmt 0.70.0
 - **提交规范**：simple-git-hooks + lint-staged + commitlint
 - **API 封装**：Axios 1.20.0
 - **测试体系**：Vitest + Testing Library Vue + Playwright + MSW + jest-axe
