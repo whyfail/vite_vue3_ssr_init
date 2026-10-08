@@ -43,8 +43,8 @@
 - **状态管理**：Pinia 4.0.3 + @pinia/nuxt 1.0.2
 - **UI 组件库**：shadcn-vue + reka-ui
 - **样式方案**：Tailwind CSS 4.3.3 + Sass
-- **图标方案**：Heroicons + @lucide/vue 1.48.0
-- **代码规范**：Oxlint 1.85.0 + ESLint 10.11.0 + oxfmt 0.70.0
+- **图标方案**：Heroicons + @lucide/vue 1.52.0
+- **代码规范**：Oxlint 1.87.0 + ESLint 10.12.0 + oxfmt 0.72.0
 - **提交规范**：simple-git-hooks + lint-staged + commitlint
 - **API 封装**：Axios 1.20.0
 - **测试体系**：Vitest + Testing Library Vue + Playwright + MSW + jest-axe
