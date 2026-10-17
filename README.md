@@ -237,7 +237,7 @@ docker run -p 3000:3000 my-ssr-app
 - 服务端请求通过 `src/server/backend.ts` 的 `backendFetch` 把 Cookie token 转换为 `Authorization: Bearer` 调用后端；token 不进入浏览器 JS 与 localStorage。
 - 登录失败时服务端透传后端 Problem Details 顶层 `code/msg/requestId`。
 - `NUXT_ENABLE_AUTH_MOCK=true` 时启用会话 Mock（演示账号 `admin`/`admin`），用于无后端的本地开发与模板 E2E；生产保持 `false`。
-- 契约类型由 `pnpm api:generate` 从 `openapi/api-contract.yaml` 生成到 `src/shared/api/generated`（禁止手工编辑），服务端统一从 `src/server/contract.ts` 导入。
+- 契约类型由 `pnpm api:generate` 先执行 `nuxt prepare`，再从 `openapi/api-contract.yaml` 生成到 `src/shared/api/generated`（禁止手工编辑），服务端统一从 `src/server/contract.ts` 导入；首次安装后也可直接运行。
 
 ## 📝 提交规范
 

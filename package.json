@@ -9,7 +9,7 @@
     "start": "nuxt dev",
     "build": "nuxt build",
     "preview": "nuxt preview",
-    "api:generate": "orval",
+    "api:generate": "nuxt prepare && orval",
     "test": "nuxt prepare && vitest run",
     "test:coverage": "nuxt prepare && vitest run --coverage",
     "test:junit": "nuxt prepare && vitest run --reporter=junit --outputFile=test-results/vitest-junit.xml",
