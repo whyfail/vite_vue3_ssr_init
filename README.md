@@ -26,7 +26,7 @@
 
   <div>
     <img src="https://img.shields.io/badge/Node.js-24.x-brightgreen?style=flat-square" alt="Node.js" />
-    <img src="https://img.shields.io/badge/pnpm-12.14.0-blue?style=flat-square" alt="pnpm" />
+    <img src="https://img.shields.io/badge/pnpm-12.16.1-blue?style=flat-square" alt="pnpm" />
     <img src="https://img.shields.io/badge/License-MIT-yellowgreen?style=flat-square" alt="License" />
   </div>
 </div>
@@ -37,24 +37,24 @@
 
 ## 🚀 技术栈
 
-- **SSR 框架**：Nuxt 4.5.2
-- **前端框架**：Vue 3.5.43
+- **SSR 框架**：Nuxt 4.6.3
+- **前端框架**：Vue 3.5.44
 - **开发语言**：TypeScript 6.0.3
-- **状态管理**：Pinia 4.0.3 + @pinia/nuxt 1.0.2
+- **状态管理**：Pinia 4.1.0 + @pinia/nuxt 1.0.3
 - **UI 组件库**：shadcn-vue + reka-ui
 - **样式方案**：Tailwind CSS 4.3.3 + Sass
-- **图标方案**：Heroicons + @lucide/vue 1.52.0
-- **代码规范**：Oxlint 1.87.0 + ESLint 10.12.0 + oxfmt 0.72.0
+- **图标方案**：Heroicons + @lucide/vue 1.64.0
+- **代码规范**：Oxlint 1.90.0 + ESLint 10.13.0 + oxfmt 0.75.0
 - **提交规范**：simple-git-hooks + lint-staged + commitlint
-- **API 封装**：Axios 1.20.0
+- **API 封装**：Axios 1.21.0
 - **测试体系**：Vitest + Testing Library Vue + Playwright + MSW + jest-axe
 
 ## 📦 快速开始
 
 ### 环境要求
 
-- Node.js 24 LTS（Krypton；支持范围 `>=24.11.0 <25`，推荐最新 24.x）
-- pnpm `12.14.0`
+- Node.js 24 LTS（Krypton；支持范围 `>=24.15.0 <25`，推荐最新 24.x）
+- pnpm `12.16.1`
 
 ### 安装依赖
 
@@ -78,6 +78,12 @@ pnpm preview
 ```
 
 生产构建输出到 `.output`。
+
+## 依赖升级兼容说明
+
+- Node.js 下限与 Nuxt/jsdom 的运行要求对齐为 24.15.0；CI 同时验证该最低版本与最新 24.x。
+- Nuxt 4.6 使用新版 CLI；服务端仍由 Nitro 构建，直接使用的 `h3` 保持与现有 Nitro API 一致的 1.x 版本。
+- TypeScript 保持 6.0.3，与当前类型检查及 ESLint parser 的支持范围一致。
 
 ## 推荐后端模板
 

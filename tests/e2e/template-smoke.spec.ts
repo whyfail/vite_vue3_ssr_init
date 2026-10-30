@@ -12,6 +12,27 @@ async function login(page: import("@playwright/test").Page) {
   await expect(page).toHaveURL(/\/docs$/);
 }
 
+test("renders login HTML before hydration and hydrates without errors", async ({
+  page,
+  request,
+}) => {
+  const response = await request.get("/login");
+  expect(response.ok()).toBe(true);
+  expect(await response.text()).toContain('id="login-title"');
+
+  const errors: string[] = [];
+  page.on("pageerror", (error) => errors.push(error.message));
+  page.on("console", (message) => {
+    if (message.type() === "error" || /hydration/i.test(message.text())) {
+      errors.push(message.text());
+    }
+  });
+
+  await login(page);
+  await expect(page.getByRole("heading", { name: "项目开发文档" })).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
 test("redirects anonymous users to login", async ({ page }) => {
   await page.goto("/docs");
 
