@@ -37,16 +37,16 @@
 
 ## 🚀 技术栈
 
-- **SSR 框架**：Nuxt 4.6.3
-- **前端框架**：Vue 3.5.44
+- **SSR 框架**：Nuxt 4.6.4
+- **前端框架**：Vue 3.5.45
 - **开发语言**：TypeScript 6.0.3
 - **状态管理**：Pinia 4.1.0 + @pinia/nuxt 1.0.3
 - **UI 组件库**：shadcn-vue + reka-ui
-- **样式方案**：Tailwind CSS 4.3.3 + Sass
-- **图标方案**：Heroicons + @lucide/vue 1.64.0
-- **代码规范**：Oxlint 1.90.0 + ESLint 10.13.0 + oxfmt 0.75.0
+- **样式方案**：Tailwind CSS 4.3.5 + Sass
+- **图标方案**：Heroicons + @lucide/vue 1.73.0
+- **代码规范**：Oxlint 1.94.0 + ESLint 10.15.0 + oxfmt 0.79.0
 - **提交规范**：simple-git-hooks + lint-staged + commitlint
-- **API 封装**：Axios 1.21.0
+- **API 封装**：Axios 1.21.1
 - **测试体系**：Vitest + Testing Library Vue + Playwright + MSW + jest-axe
 
 ## 📦 快速开始
